@@ -1,73 +1,73 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# Full Stack Test Task -- Back-end
 
 ## Description
+This is the backend for a **User signup & signin app** built with **NestJS**. The backend provides RESTful APIs to signup users, login, and display welcome message from backend along with logout functionality.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Backend Setup
 
-## Installation
+To run the backend application, follow the steps below:
 
-```bash
-$ npm install
-```
-
-## Running the app
+1. **Install Dependencies**:
+   Install all necessary dependencies using npm:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+  npm install
 ```
 
-## Test
+2. **Run Docker**:
+   Initialize and run docker to run MongoDB:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+  docker-compose up -d   
 ```
 
-## Support
+3. **Run the backend app**:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+  npm run start:dev
+```
 
-## Stay in touch
+## ***Features:***
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+* **App Backend**
+1)  Create a backend to do application using ***Node.js***, ***TypeScript*** , ***MongoDB database*** and ***Docker***.
+2)  The MongoDB database is hosted inside a Docker container for an isolated, portable, and consistent environment.
+3)  Ensure that the backend REST APIs communicates effectively with the chosen frontend technology (React.js).
+4)  Structured architecture (_guards, modules, controllers, services, entity_)
+5)  Security considerations (input validation)
 
-## License
+* **User Authentication**
+1) Secure backend user signup and login functionality with ***JWT***.
+2) Add ***JWT*** authentication/authorization for access to REST API Endpoints (CRUD).
 
-Nest is [MIT licensed](LICENSE).
+* **Nice to haves implemented:**
+• Used TypeScript
+• Implemented Nest.js logging on the back end
+• Followed security best practices
+
+* **Backend API Endpoints:**
+1) Sign up user: http://localhost:3001/auth/signup
+2) Log in User: http://localhost:3001/auth/login
+6) GET User Welcome Message: http://localhost:3000/
+
+## Technologies Used
+
+- **NestJS**: A powerful framework for building server-side applications with Node.js.
+- **Mongoose**: MongoDB object modeling tool for Node.js, used for interacting with MongoDB.
+- **MongoDB**: NoSQL database to store user and task information.
+- **JWT (JSON Web Tokens)**: For secure authentication and authorization.
+- **Passport.js (passport-local)**: Strategy for authenticating users with a username (or email) and password.
+- **Passport.js (passport-jwt)**: Strategy for authenticating users with JWT (JSON Web Tokens).
+- **Bcrypt.js**: To hash passwords securely.
+- **Prettier**: For clean code & code formatting.
+- **Docker**: Used to run postgres DB in a containerized environment.
+
+  ### ***Env:***
+```bash
+# MongoDB URI
+MONGO_URI= mongodb://localhost:27017/nest-auth
+
+# JWT SECRET
+JWT_SECRET=
+
+```
