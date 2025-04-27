@@ -30,7 +30,7 @@ To run the backend application, follow the steps below:
 ## ***Features:***
 
 * **App Backend**
-1)  Create a backend signup and signin application with signup, signin and welcome message API endpoints. using ***Node.js***, ***TypeScript*** , ***MongoDB database*** and ***Docker***.
+1)  Create a backend signup and signin application with signup, signin and welcome message API endpoints. Developed using ***Node.js***, ***TypeScript*** , ***MongoDB database*** and ***Docker***.
 2)  The MongoDB database is hosted inside a Docker container for an isolated, portable, and consistent environment.
 3)  Ensure that the backend REST APIs communicates effectively with the chosen frontend technology (React.js).
 4)  Structured architecture (_guards, modules, controllers, services, entity_)
